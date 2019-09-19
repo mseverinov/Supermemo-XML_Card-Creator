@@ -1,0 +1,99 @@
+2 cards per item. thats it
+
+perhaps pronounciation cards are what are slowing me down. Its not a large part of my grade.....
+
+a pronounce card should still be made as long as there is an IPA
+
+could it make more sense to make cards within the context of writing them to an xml? Right now all cards are created and then all cards are written. Why have two iterals instead of one?
+
+am I handling the case where the plural has a sound file but the singular does not?
+
+write code to handle the cases where the plural is the same as the singular
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+High:
+
+create way to automate phrase card creation
+	taking a single entry of english and german create the following cards: translate german -> english, 		translate: english -> german, spell
+
+fix case where audio cards are written for a plural that does not have audio
+
+create sets of items to import. Perhaps day by day. Introducing so many items per day. Starting off with a certain card per item and introducing the next card in an order on a following day. Allowing for spaced introduction of new words without having to wait to complete a card set for all the words of that week before moving onto the next card set
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Good:
+re examine xml tree stuff and look for more ways to get audio files
+
+if vocab items have alements that can not be found. try splitting if possible and look for components.
+
+remove weekly vocab subfolder
+
+turn each words card set into a dict. write card based on an ordering system
+
+write code that sames a class containing all contructed cards, words, ect to a file
+	also write codes that allows xml file to be made from that info upon request
+
+if moving vocab list from main folder and there is already a  list in the destination. Create a prompt asking to confirm this action
+
+alphabetize folders
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Non-Priority:
+improve readability of xml output
+
+reexamine ordinal numbers
+
+figure out how to create source code for an element
+figure out how to create source code for a group of elements
+create way to read source code
+	create a python structure to read source code into for easy modification
+determine if it is possible to programatically alter supermemo library by modifying source code output
+	if possible see if it can be used to consolidate or fix stuff up
+create python versions of templates for source code
+determine what happens if various parts of source code are not included
+determine what happens if element numbers of sourcecode import overlap with numbers of current elements
+
+source code notes
+	contains mem status of an element. dismissed undismissed ect
+	contains position and color of elements
+	has auto play status
+
+figure out how to split up vocab audio into individual words
+
+remove one line card functions
+
+look into how necessary it is to keep all paths premade in a paths obj
+
+replace operation_cls in get_ipa and get_sound with super
+
+create macros to automate operations that cannot be coded
+
+reexamine how plurals are stored. currenlty they are a word class that has cards but are only contained within a noun class. they are not in the word list by themselves since the process_list function only adds a word for every chunk and a noun and its plural are in the same chunk
+
+spelling card with an english audio prompt
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+DONE:
+Alter listen and pronounce cards to have both english and german in the answer
+if there is no audio file then make translate cards
+only make a translate card from german to english. english to german can be handled by spell card
+
+what is going on with plurals?
+
+check for the existance of audio for a word in the converted folder before trying to download another copy
+
+remove english to german translation cards
+
+have converted files deposited in main converted folder. delete og oggs
+
+fix plural card creation
+
+fix special characters being turned into weird shit
+
+Remove all listen cards
+
+alter card writing so that a translation card is made if there is no audio
